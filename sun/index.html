@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sun</title>
+    <style>
+        div{
+            position: fixed;
+        }
+        .sun{
+            width: 20vw;
+            height: 20vw;
+            background-color: orange;
+            border-radius: 50%;
+            bottom: 20vw;
+            left: 15%;
+            z-index: 2;
+        }
+
+        .grass{
+            bottom: 0;
+            height: 30vw;
+            left: 0;
+            right: 0;
+            background-color: green;
+            z-index: 3;
+        }
+        .sky{
+            background-color: lightblue;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="sun"></div>
+    <div class="grass"></div>
+    <div class="sky"></div>    
+</body>
+</html>
