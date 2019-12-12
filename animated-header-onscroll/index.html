@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animated header onscroll</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        height: 100vh;
+        width:100%;
+        overflow:hidden; 
+        position:relative;
+        background-image: url("img/header-background.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    main {
+        height: 150vh;
+        background-color: black;
+    }
+</style>
+</head>
+<body>
+    <header></header>
+    <main></main>
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+    crossorigin="anonymous"></script>
+
+    <script>
+        const $doc = $(document);
+        const $header = $('header');
+        const $main = $('main');
+
+        $doc.on("scroll", function () {
+            
+            const scrollPos = $doc.scrollTop();
+            const sectionOffset = $main.offset().top;
+            const headerHeight = $header.outerHeight();
+
+            if (scrollPos < sectionOffset) {  
+                $header.css({
+                'opacity': 1 - scrollPos / headerHeight,
+                'filter': 'grayscale(' + 2 * scrollPos / headerHeight + ')',
+                })
+            }
+        })
+    </script>
+
+</body>
+</html>
