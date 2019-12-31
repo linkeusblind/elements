@@ -19,9 +19,7 @@
             font-family: Arial, Helvetica, sans-serif;
         }
         div {
-            width: 40vw;
             height: 10vw;
-            margin: 20px;
             text-align: center;
         }
         a {
@@ -30,55 +28,71 @@
             text-decoration: none;
             color:black;
         }
+        .elements{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 10px;
+            padding: 10px;
+         }
+
+         .elements > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid black;
+            text-align: center;
+            font-size: 30px;
+        }
+        .elements div{
+            flex: 1;
+        }
 
         .el1 {
-            float: left;
             background-color: blue;
             
         }
         .el2 {
-            float: left;
             background-color: green;
         }
         .el3 {
-            float: left;
             background-color: rgb(198, 240, 14);
         }
         .el4 {
-            float: left;
             background-color: rgb(143, 9, 98);
         }
         .el5 {
-            float: left;
             background-color: rgb(255, 60, 0);
         }
         .el6 {
-            float: left;
             background-color: rgb(10, 9, 94);
             color: white;
         }
         .el7 {
-            float: left;
             background-color: rgb(16, 12, 238);
             color: white;
         }
         .el8 {
-            float: left;
             background-color: rgb(121, 10, 74);
+            color: white;
+        }
+        .el9 {
+            background-color: rgb(5, 192, 61);
             color: white;
         }
     </style>
 </head>
 <body>
     <header>Elements of scripts and plugins</header>
-    <a href="burger/index.html"><div class="el1">burger</div></a>
-    <a href="sun/index.html"><div class="el2">sun</div></a>
-    <a href="animated-slider/index.html"><div class="el3">animated-slider</div></a>
-    <a href="animated-header-onscroll/index.html"><div class="el4">animated-header-onscroll</div></a>
-    <a href="voronoi-animation/index.html"><div class="el5">voronoi-animation</div></a>
-    <a href="snow/index.html"><div class="el6">snow</div></a>
-    <a href="countdown/index.html"><div class="el7">countdown</div></a>
-    <a href="newyear/index.html"><div class="el8">New Year Countdown</div></a>
+    <div class="elements">
+        <a href="burger/index.html"><div class="el1">burger</div></a>
+        <a href="sun/index.html"><div class="el2">sun</div></a>
+        <a href="animated-slider/index.html"><div class="el3">animated-slider</div></a>
+        <a href="animated-header-onscroll/index.html"><div class="el4">animated-header-onscroll</div></a>
+        <a href="voronoi-animation/index.html"><div class="el5">voronoi-animation</div></a>
+        <a href="snow/index.html"><div class="el6">snow</div></a>
+        <a href="countdown/index.html"><div class="el7">countdown</div></a>
+        <a href="newyear/index.html"><div class="el8">New Year Countdown</div></a>
+        <a href="wishes/index.html"><div class="el9">New Year wishes</div></a>
+    </div>
+    
 
 </body>
 </html>
