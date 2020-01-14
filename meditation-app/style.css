@@ -139,4 +139,10 @@ video {
   height: 100vh;
   z-index: -10;
 }
+
+@media screen and (min-width: 1024px) {
+  video {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=style.css.map */
