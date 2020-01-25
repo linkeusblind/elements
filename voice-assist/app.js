@@ -1,6 +1,8 @@
 const btn = document.querySelector('.talk');
 const content = document.querySelector('.answer');
 
+
+
 // Odpowiedzi
 const greetings = ['Spoko ziomek, tragedii nie ma', 'A co cię to obchodzi', 'Najlepszy dzień ever', 'Całkiem dobrze, a co u Ciebie', 'Zostaw mnie w spokoju'];
 
@@ -12,11 +14,14 @@ const dobranoc = ['Dobranoc, życzę Ci miłych snów', 'a a a kotki dwa, a ja m
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
 
+recognition.lang = 'pl-PL';
+
 recognition.onstart = function() {
     console.log('voice is activated, you can speak to microphone');
 };
 
 recognition.onresult = function(event) {
+    console.log(event);
     const current = event.resultIndex;
     const transcript = event.results[current][0].transcript;
     content.textContent = transcript;
@@ -27,9 +32,13 @@ btn.addEventListener('click', () => {
     recognition.start();
 });
 
-function readOutLoud(message){
-    const speech = new SpeechSynthesisUtterance();
 
+
+function readOutLoud(message){
+    let speech = new SpeechSynthesisUtterance();
+
+
+    
     speech.text = message;
 
     if(message.includes('słychać')){
@@ -45,11 +54,19 @@ function readOutLoud(message){
         const finalText = dobranoc[Math.floor(Math.random() * dobranoc.length)];
         speech.text = finalText;
     }
-
+    speech.lang = 'pl-PL';
+    speech.name = 'Google polski';
     speech.volume = 1;
     speech.rate = 1;
-    speech.pitch = 0.7;
-
+    speech.pitch = 0.1;
+    
+    console.log(speech.name);
+    
+ 
     window.speechSynthesis.speak(speech);
 
+
+
+
 }
+
