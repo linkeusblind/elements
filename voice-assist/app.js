@@ -58,7 +58,7 @@ function readOutLoud(message){
     speech.name = 'Google polski';
     speech.volume = 1;
     speech.rate = 1;
-    speech.pitch = 0.1;
+    speech.pitch = 1;
     
     console.log(speech.name);
     
