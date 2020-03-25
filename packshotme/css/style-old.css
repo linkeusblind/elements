@@ -1,0 +1,438 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700&subset=latin,latin-ext);
+
+/* GLOBAL STYLES */
+body, body *{
+  margin:0;
+  padding:0;
+  border:0;
+}
+
+body,table{
+  color:#7f7f7f;
+  /*font-size:13px;*/
+  line-height: 1.6;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  padding:0; 
+  margin:0; 
+  text-align:center;
+  font-size: 100%;
+}
+
+.input, select, textarea{
+  padding:2px;
+  border-width:1px;
+  border-style:solid;
+  border-color:#6c6c6c #cccccc #cccccc #6c6c6c;
+  font-size:1em;font-family:Arial;
+  text-shadow:1px 1px #e0e0e0;
+}
+
+.input.warning-required, select.warning-required, textarea.warning-required{
+  border-color:#ac0000 #c78688 #c78688 #ac0000;
+  background:#fbefef;
+}
+
+.submit{
+  padding:5px 14px; 
+  border:0 none;
+  background:#023f88;
+  color:#fff;
+  font-weight:normal; 
+  font-family: 'Oswald', sans-serif; 
+  font-size:1em;
+  -webkit-box-shadow:0 0 10px rgba(0,0,0,.3);
+  box-shadow:0 0 10px rgba(0,0,0,.3); 
+  text-transform:uppercase
+}
+
+.submit:hover{ 
+  background-color:#FFF;
+  cursor:pointer; 
+  color:#333
+}
+
+* html .submit{
+  padding:3px 1px !important;
+}
+
+* html .input{
+  height:28px;
+}
+
+.form label{
+  font-size:1em;
+  color:#023f88;
+  font-weight:bold;
+}
+
+.hide{
+  display:none;
+}
+
+a{
+  color:#a3238e;
+  text-decoration:underline;
+}
+a:hover{
+  color:#333;
+  text-decoration:underline;
+}
+
+
+.form label span{
+  padding-left:10px;
+  color:#acb3b7;
+  font-weight:normal;
+}
+
+#body, #foot{
+  float:left;
+  width:100%;
+  margin:0 auto;
+  padding:0;
+}
+
+/* LOGO, HEADER BACKGROUND AND SLOGAN */
+
+#head1{
+  height:400px;
+  width:100%;
+  display: inline-flex;
+  clear:both; 
+  overflow:hidden; 
+  position:relative;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#logo{
+  height: 200px;
+}
+
+#title{
+  margin: 30px;
+}
+
+ #title a{
+  color:#ffffff;
+  font-family: 'helvetica', sans-serif;
+  text-decoration:none; 
+  font-size:3.5vw; 
+
+}
+
+ #title a span{
+ 
+  background:inherit;
+  font-size:24px;
+}
+
+ #title a strong{
+
+  background:inherit; 
+  font-weight:normal
+}
+
+* html #title{
+  width:100%;
+}  /*IE 6 hack*/ 
+
+#myTopnav {
+  text-align: center;
+}
+.topnav {
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.2);
+}
+
+/* Style the links inside the navigation bar */
+
+.topnav a {
+  text-align: center;
+  display: inline;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.7vw;
+}
+/* The sticky class is added to the myTopnav with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+   color: black;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* HEADER WITH TOP MENU BELOW LOGO */
+#head2{
+  position:relative; 
+  z-index:101;
+}
+
+/* BODY STYLES - LEFT AND RIGHT COLUMN */
+#body{
+  clear:both;
+  margin:0;
+ 
+}
+
+#body .container{
+  width:980px;
+  margin:0 auto;
+  padding-top:6px; 
+  padding-bottom:5px;
+  overflow:hidden;
+  text-align:left;
+}
+
+/* PAGE TITLE */
+h1{
+  margin:0 0 10px;
+  padding:0;
+  font-weight:bold;
+  font-family: 'Helvetica', sans-serif; 
+  font-size:25px;
+  text-transform:uppercase;
+  color:#a3238e;
+}
+
+h2{
+  margin:0 0 10px;
+  padding:0;
+  font-weight:bold;
+  font-family: 'Helvetica', sans-serif; 
+  font-size:25px;
+  text-transform:uppercase;
+  color:#a3238e;
+}
+
+#pageDescription{
+  margin:0 0 10px;
+  padding:0;
+  font-weight:normal;
+  font-family: 'Helvetica', sans-serif; 
+  font-size:1em;
+  font-weight:normal; 
+  color:#7f7f7f;
+}
+
+p{
+  margin-top: 15px;
+}
+ul {
+  list-style-type: square;
+  margin-left: 15px;
+}
+#headerBtn {
+  margin: auto auto 5px auto;
+}
+
+div.bodyImg img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  float: left;
+  width: 50%;
+}
+
+.callBtn {
+  background-color: #ffdd00; 
+  color: #000;
+  border: none;
+  border-radius:10px;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 0 0 4px #a3238e, 0 0 0 8px #ffdd00;
+  font-size: 2vw;
+  margin: 12px 10px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
+.callBtn:hover {
+  background-color: #c77eb5;
+  color: white;
+  box-shadow: 0 0 0 8px #a3238e, 0 0 0 12px #c77eb5;
+}
+/* NAVIGATION PATH - TREE */
+#page h4{padding:0;margin-top:10px; margin-bottom:10px;color:#023f88;background:inherit;font-size:15px;}
+#page h4 a{background-color:inherit;color:#023f88;text-decoration:none;font-weight:normal;}
+#page h4 a:hover{text-decoration:underline;}
+*:first-child+html #page h4{top:-5px;} /* IE 7 hack */
+
+* html #page h4{top:-5px;} 
+* html #page h6.date{top:-5px;font-size:12px} /* IE 6 hack */
+#page h6.date{right:0;font-size:12px; margin-bottom:4px;}
+
+/* PAGE CONTENT */
+#page div.content{padding-top:3px;font-size:13px;line-height:175%;}
+#page div.content ul, #page div.content ol{margin:0 0 0 30px;padding:0;}
+#page div.content li{margin:8px 0;padding:0;border-left:0;}
+#page div.content p{padding-bottom:10px;}
+
+.pages{padding:8px 0;text-align:right;font-size:1.083em;}
+.pages ul, .pages li{display:inline;}
+.pages li{padding:0 2px;}
+.pages a, .pages strong{padding:0 1px;font-size:1.083em;}
+
+
+
+
+/* FOOTER - SITE AND SCRIPT COPYRIGHTS STYLES */
+.fb-page{
+  margin:auto;
+  text-align:right;
+}
+#foot{clear:both;background:#000000; font-family: 'Futura', sans-serif; color:#ffffff; font-size:13px; line-height:18px;}
+#foot .container{margin:25px auto 0 auto;padding:27px 0 0;overflow:hidden;}
+#foot a{background:inherit;color:#ffffff;text-decoration:underline;}
+#copy{float:left;padding:0 0 25px;}
+#backToTop{text-align:center; padding:0 0 25px;}
+.foot{float:right;padding:0 0 25px;}
+
+
+@media print{
+  /* PRINT STYLES */
+  * {color:#000 !important;background:#fff !important;border-color:#444 !important;border-width:1px !important;text-shadow:none !important;-webkit-box-shadow:none;box-shadow:none;}
+
+  body{margin:1cm 0;}
+  #container{width:17.2cm;height:auto;}
+  #head2 .container, #head2{height:auto;}
+  #logo{padding:0 0 0.2cm;}
+  #head1 .container, #head2 .container, #body .container, #foot .container{border-width:0px !important;}
+
+  #body{clear:none;}
+  #body .container{overflow:visible;}
+  #logo #title, #page h1{padding:0;}
+  #page h4{position:relative;top:0;}
+
+  #header .container, #body .container, #foot .container, #content, #page{float:none;width:17.2cm;padding:0;margin:0;}
+  #column, #head2, #back, #contactPanel, #socialButtons, #plusOne{display:none;}
+}
+
+
+
+.youtube{width:30%;padding:1px;border:none;}
+
+
+
+
+/* RESPONSIVE WEB DESIGN - media queries */
+@media screen and (max-width:1024px){ /* RWD Step 1 */
+ 
+  body{background-image:none;}
+  #head1, #head2{width:100%;}
+  #head1{display: list-item;}
+  #title{margin:30px;}
+  #body .container, #foot .container{width:100%;}
+  #head2 .container{height:auto;margin-bottom:15px;}
+  #content{width:80%; margin: 0 auto; padding:0 0 0 5%;}
+  #page{width:96%;}
+}
+
+
+@media screen and (max-width:840px){
+  #head2 .container{background:none;}
+  #content{width:95%;margin: 0 auto;padding:0 0 0 2%;border:none;}
+  #options{font-size:1.167em;}
+
+}
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a{display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  } 
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  #head1{
+    height:400px;
+    width:100%;
+    clear:both; 
+    overflow:hidden; 
+    position:relative;
+    background-image:url('/images/header-images/header-background.jpg');
+    background-size:  auto 400px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .callBtn {
+    width: 80%;
+    font-size: 4vw;
+  }
+  .topnav a {
+    font-size: 4vw;
+  }
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .responsive {
+    width: 100%;
+  }
+}
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+  
+  /* The sticky class is added to the myTopnav with JS when it reaches its scroll position */
+  .topnav.responsive.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+@media screen and (max-width:414px){ /* RWD Step 3 */
+  #imagesList1{padding-right:5px;}
+  #imagesList2{padding-left:5px;}
+  .imagesList li{width:75px;}
+  .subpagesList li img, .imagesList li img{width:65px;}
+  #foot .container{margin:15px 10px;}
+  #copy{padding:0 0 10px;}
+  #backToTop{text-align:center; padding:0 0 10px;}
+  .foot{float:left;clear:left;padding:0 0 5px;}
+  #plusOne{top:5px;left:0;}
+  }
