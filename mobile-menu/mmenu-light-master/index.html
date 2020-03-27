@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="dist/demo.css" />
+    <link rel="stylesheet" href="dist/mmenu-light.css">
+    <title>Mobile menu</title>
+</head>
+
+<body>
+    <div id="page">
+        <div class="header">
+            <a href="#menu"><span></span></a>
+            LOGO
+            <nav id="menu">
+                <ul>
+                    <li class="Selected"><a href="#">MARKA</a></li>
+                    
+                    <li><a href="#contact">OFERTA</a></li>
+                    <li><span>PORTFOLIO</span>
+                        <ul>
+                            <li><a href="#about/history">KOSMETYKI</a></li>
+                            <li><a href="#about/history">ELEKTRONIKA</a></li>
+                            <li><a href="#about/history">SZKŁO</a></li>
+                            <li><a href="#about/history">OBUWIE I GALANTERIA</a></li>
+                            <li><a href="#about/history">BIŻUTERIA</a></li>
+                            <li><a href="#about/history">INNE</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">STUDIO</a></li>
+                    <li><a href="#contact">OPINIE</a></li>
+                    <li><a href="#contact">KONTAKT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <script src="dist/mmenu-light.js"></script>
+    <script>
+        var menu = new MmenuLight(
+            document.querySelector('#menu'),
+            'all'
+        );
+
+        var navigator = menu.navigation({
+            // selectedClass: 'Selected',
+            // slidingSubmenus: true,
+            // theme: 'dark',
+            // title: 'Menu'
+        });
+
+        var drawer = menu.offcanvas({
+            position: 'right'
+        });
+
+        //	Open the menu.
+        document.querySelector('a[href="#menu"]')
+            .addEventListener('click', evnt => {
+                evnt.preventDefault();
+                drawer.open();
+                
+            });
+            document.querySelector('#menu')
+            .addEventListener('click', evnt => {
+                evnt.preventDefault();
+                drawer.close();
+                
+            });
+    </script>
+</body>
+
+</html>

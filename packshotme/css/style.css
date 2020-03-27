@@ -30,8 +30,7 @@
 }
 
 #logo-fill:hover {
-  -webkit-box-shadow: 20px 30px 40px #C9006E;
-          box-shadow: 20px 30px 40px #C9006E;
+  width: 75%;
 }
 
 #logo path:nth-child(1) {
