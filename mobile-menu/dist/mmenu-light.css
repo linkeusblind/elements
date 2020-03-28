@@ -302,7 +302,9 @@ body.mm-ocd-opened {
 
 .mm-spn.mm-spn--navbar.mm-spn--main:after {
     padding-left: 20px;
-    padding-left: var(--mm-spn-item-indent)
+    padding-left: var(--mm-spn-item-indent);
+    text-align: right;
+    font-size: large;
 }
 
 .mm-spn.mm-spn--navbar ul {
@@ -323,12 +325,12 @@ body.mm-ocd-opened {
 
 .mm-spn.mm-spn--light {
     color: #bdbdbd;
-    background: #000000
+    background: #fff;
 }
 
 .mm-spn.mm-spn--dark {
     color: #ddd;
-    background: #333
+    background: rgb(31, 31, 31)
 }
 
 .mm-spn.mm-spn--vertical {

@@ -41,21 +41,14 @@
     <meta name="theme-color" content="#000000">
 
     <link rel="stylesheet" href="css/style.css" />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script type="text/javascript" src="js/common.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            backToTop();
-        });
-    </script>
-    <script type="text/javascript" src="js/menu.js"></script>
+    <link rel="stylesheet" href="css/nav.css">
 
 
 </head>
 
 <body>
-    <header>
+    <header class="header">
+        <a href="#menu"><span></span></a>
         <!-- Logo -->
 
         <div>
@@ -444,16 +437,30 @@
                         xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAScAAADQCAYAAABFuqdUAAAACXBIWXMAAAsSAAALEgHS3X78AAAA" />
                 </defs>
             </svg>
-
-
         </div>
+
+        <!-- navigation -->
+        <nav id="menu">
+            <ul>
+                <li class="Selected"><a href="#">MARKA</a></li>
+
+                <li><a href="#contact">OFERTA</a></li>
+                <li><span>PORTFOLIO</span>
+                    <ul>
+                        <li><a href="#about/history">KOSMETYKI</a></li>
+                        <li><a href="#about/history">ELEKTRONIKA</a></li>
+                        <li><a href="#about/history">SZKŁO</a></li>
+                        <li><a href="#about/history">OBUWIE I GALANTERIA</a></li>
+                        <li><a href="#about/history">BIŻUTERIA</a></li>
+                        <li><a href="#about/history">INNE</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">STUDIO</a></li>
+                <li><a href="#contact">OPINIE</a></li>
+                <li><a href="#contact">KONTAKT</a></li>
+            </ul>
+        </nav>
     </header>
-
-
-
-
-
-
 
     <div id="foot">
         <div class="container">
@@ -462,6 +469,38 @@
             <div id="backToTop"><a href="#container"><span></span>DO GÓRY</a></div>
         </div>
     </div>
+    <script src="js/nav.js"></script>
+    <script>
+        var menu = new MmenuLight(
+            document.querySelector('#menu'),
+            'all'
+        );
+
+        var navigator = menu.navigation({
+            selectedClass: 'Selected',
+            slidingSubmenus: true,
+            theme: 'dark',
+            title: 'X'
+        });
+
+        var drawer = menu.offcanvas({
+            position: 'right'
+        });
+
+        //	Open the menu.
+        document.querySelector('a[href="#menu"]')
+            .addEventListener('click', evnt => {
+                evnt.preventDefault();
+                drawer.open();
+
+            });
+        document.querySelector('#menu')
+            .addEventListener('click', evnt => {
+                evnt.preventDefault();
+                drawer.close();
+
+            });
+    </script>
     <!-- Star ratings -->
     <script type='application/ld+json'>
         {
