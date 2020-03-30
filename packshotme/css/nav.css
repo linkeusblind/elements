@@ -304,7 +304,7 @@ body.mm-ocd-opened {
     padding-left: 20px;
     padding-left: var(--mm-spn-item-indent);
     text-align: right;
-    font-size: large;
+    font-size: x-large;
 }
 
 .mm-spn.mm-spn--navbar ul {
