@@ -4,11 +4,14 @@
 }
 
 body {
-    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 30px auto;
     text-align:center;
     line-height: 60px;
     color: #ffc400;
+    flex-direction: column;
 }
 
 
