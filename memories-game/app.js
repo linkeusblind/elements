@@ -34,9 +34,9 @@ const memoryGame = {
                 this.canGet = false;
 
                 if (this.tilesChecked[0].dataset.cardType === this.tilesChecked[1].dataset.cardType) {
-                    setTimeout(this.deleteTiles.bind(this), 500);
+                    setTimeout(this.deleteTiles.bind(this), 1000);
                 } else {
-                    setTimeout(this.resetTiles.bind(this), 500);
+                    setTimeout(this.resetTiles.bind(this), 1000);
                 }
 
                 this.moveCount++;
