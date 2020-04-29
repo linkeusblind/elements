@@ -4,18 +4,14 @@
 }
 
 body {
-    display: flex;
     margin: 30px auto;
     text-align:center;
     line-height: 60px;
     color: #ffc400;
-    flex-direction: column;
-}
-
-.title {
     align-items: center;
     justify-content: center;
 }
+
 
 .game-board {
     margin:30px auto;
