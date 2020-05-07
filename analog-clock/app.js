@@ -25,6 +25,9 @@ function updateClock() {
 updateClock();
 
 function randomClock() {
+    document.getElementById('input-hour').value = '';
+    document.getElementById('input-min').value = '';
+
     confirmTime.style.visibility = "visible";
     document.getElementById('verify').innerHTML = "";
     clearInterval(seconds);
@@ -48,7 +51,6 @@ function timeCheck() {
 
 
     if (inputHour == hour && inputMin == min) {
-        console.log("yes");
         document.getElementById('verify').innerHTML = "Brawo !!!";
         ptns = ptns + 1;
         document.getElementById('points').innerHTML = ptns;
@@ -56,7 +58,6 @@ function timeCheck() {
 
     } else {
         document.getElementById('verify').innerHTML = "Błąd";
-        console.log("no");
     }
 };
 

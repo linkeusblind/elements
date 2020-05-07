@@ -87,8 +87,8 @@ input {
   position: relative;
   width: 50vh;
   height: 50vh;
-  max-height: 80vw;
-  max-width: 80vw;
+  max-height: 70vw;
+  max-width: 70vw;
   overflow: hidden;
   border-radius: 50%;
   border: solid white;
