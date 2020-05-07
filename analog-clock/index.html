@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naucz się zegara.</title>
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="keywords"
+        content="zegar analogowy, nauka zegara, nauka zegara analogowego, aplikacja do nauki zegara analogowego" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description"
+        content="Aplikacja do nauki zegara analogowego." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Nauka zegara analogowego." />
+    <meta property="og:description"
+        content="Aplikacja do nauki zegara analogowego." />
+    <meta property="og:site_name" content="Aplikacja do nauki zegara analogowego." />
+    <meta property="og:image" content="android-chrome-192x192.png" />
+    <meta property="og:image:secure_url" content="android-chrome-192x192.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description"
+        content="Aplikacja do nauki zegara analogowego." />
+    <meta name="twitter:title" content="Nauka zegara analogowego." />
+    <meta name="twitter:image" content="android-chrome-192x192.png" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <div id="verify"></div>
+    <div id="points"></div>
+    <button class="random-time">Losuj czas</button>
+    <div class="answer">
+        <input type="number" id="input-hour">
+        <input type="number" id="input-min">
+        <button class="confirm">sprawdź</button>
+    </div>
+    <div class="clock">
+        <div class="num num1">
+            <div>1</div>
+        </div>
+        <div class="num num2">
+            <div>2</div>
+        </div>
+        <div class="num num3">
+            <div>3</div>
+        </div>
+        <div class="num num4">
+            <div>4</div>
+        </div>
+        <div class="num num5">
+            <div>5</div>
+        </div>
+        <div class="num num6">
+            <div>6</div>
+        </div>
+        <div class="num num7">
+            <div>7</div>
+        </div>
+        <div class="num num8">
+            <div>8</div>
+        </div>
+        <div class="num num9">
+            <div>9</div>
+        </div>
+        <div class="num num10">
+            <div>10</div>
+        </div>
+        <div class="num num11">
+            <div>11</div>
+        </div>
+        <div class="num num12">
+            <div>12</div>
+        </div>
+
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+
+
+        <div class="hand" id="sec">
+            <div class="sec"></div>
+        </div>
+        <div class="hand" id="min">
+            <div class="min"></div>
+        </div>
+        <div class="hand" id="hour">
+            <div class="hour"></div>
+        </div>
+
+    </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
