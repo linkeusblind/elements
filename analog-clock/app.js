@@ -42,7 +42,7 @@ function randomClock() {
 
     clearInterval(seconds);
     let sec = 0;
-    min = Math.floor(Math.random() * 60) + 1;
+    min = Math.floor(Math.random() * 59);
     hour = Math.floor(Math.random() * 12) + 1;
 
     secDiv.style.transform = "rotate(" + (sec * 6) + "deg)"
