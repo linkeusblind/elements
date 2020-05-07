@@ -1,6 +1,9 @@
 const secDiv = document.getElementById('sec');
 const minDiv = document.getElementById('min');
 const hourDiv = document.getElementById('hour');
+const face = document.getElementById('face');
+const verify = document.getElementById('verify');
+const style = document.head.appendChild(document.createElement("style"));
 
 var min;
 var hour;
@@ -28,8 +31,15 @@ function randomClock() {
     document.getElementById('input-hour').value = '';
     document.getElementById('input-min').value = '';
 
+    style.innerHTML = "";
+
+
     confirmTime.style.visibility = "visible";
-    document.getElementById('verify').innerHTML = "";
+    face.style.background = "yellow";
+
+
+
+
     clearInterval(seconds);
     let sec = 0;
     min = Math.floor(Math.random() * 60) + 1;
@@ -51,13 +61,17 @@ function timeCheck() {
 
 
     if (inputHour == hour && inputMin == min) {
-        document.getElementById('verify').innerHTML = "Brawo !!!";
+        face.style.background = "#31fc03";
         ptns = ptns + 1;
         document.getElementById('points').innerHTML = ptns;
         confirmTime.style.visibility = "hidden";
+        style.innerHTML = ".face::before{top: 35px;width: 40px;height: 20px;}}";
+
 
     } else {
-        document.getElementById('verify').innerHTML = "Błąd";
+        face.style.background = "red";
+        
+        style.innerHTML = ".face::before{top: 40px;width: 30px;height: 5px;background: darkred;border-top-left-radius: 50px;border-top-right-radius: 50px;transform: rotate(-10deg);}}";
     }
 };
 

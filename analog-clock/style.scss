@@ -58,18 +58,87 @@ input {
 
 #verify {
     position: absolute;
-    top: 10px;
+    top: 45vh;
+    right: 10px;
     font-size: 6vh;
     color: white;
 }
+.face{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgb(255, 217, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 2s;
+}
+.face:hover{
+    background-color: yellowgreen;
+}
+.face::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    width: 30px;
+    height: 15px;
+    background: rgb(209, 0, 0);
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    transition: 0.5s;
+}
+.face:hover::before{
+    top: 40px;
+    width: 30px;
+    height: 5px;
+    background: darkred;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    transform: rotate(-10deg);
+}
+.eyes{
+    position: relative;
+    top: -10px;
+    display: flex;
+}
+.eyes .eye{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    display: block;
+    background: #fff;
+    margin: 0 5px;
+    border-radius: 50%;
+}
+.eyes .eye::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: #333;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.eye:hover::before{
+    border-radius: 30%;
+    width: 13px;
+    height: 13px;
+    background: darkred;
+}
+
 
 #points {
     position: absolute;
-    top: 70px;
+    top: 45vh;
+    left: 10px;
     font-family: 'Sacramento', cursive;
     font-family: 'Merienda One', cursive;
     font-size: 6vh;
-    color: rgb(0, 19, 128);
+    color: #31fc03;
 }
 
 .clock {
@@ -151,7 +220,7 @@ input {
     transform: rotate(90deg);
 }
 .num3 div {
-    font-size: 5vh;
+    font-size: 4vh;
     transform: rotate(-90deg);
 }
 
@@ -173,7 +242,7 @@ input {
     transform: rotate(180deg);
 }
 .num6 div {
-    font-size: 5vh;
+    font-size: 4vh;
     transform: rotate(-180deg);
 }
 
@@ -195,7 +264,7 @@ input {
     transform: rotate(270deg);
 }
 .num9 div {
-    font-size: 5vh;
+    font-size: 4vh;
     transform: rotate(-270deg);
 }
 
@@ -217,7 +286,7 @@ input {
     transform: rotate(0deg);
 }
 .num12 div {
-    font-size: 5vh;
+    font-size: 4vh;
     transform: rotate(0deg);
 }
 
@@ -258,7 +327,7 @@ input {
 }
 
 // Options
-$size: 101%;
+$size: 104%;
 
 $feature : white;
 
@@ -266,7 +335,6 @@ $feature : white;
 &__indicator {
     position: absolute;
     left: calc(50% - 1px);
-    top: 5px;
     width: 3px;
     transform-origin: bottom center;
     z-index: 2;

@@ -69,18 +69,107 @@ input {
 
 #verify {
   position: absolute;
-  top: 10px;
+  top: 45vh;
+  right: 10px;
   font-size: 6vh;
   color: white;
 }
 
+.face {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ffd900;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.face:hover {
+  background-color: yellowgreen;
+}
+
+.face::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  width: 30px;
+  height: 15px;
+  background: #d10000;
+  border-bottom-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.face:hover::before {
+  top: 40px;
+  width: 30px;
+  height: 5px;
+  background: darkred;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+.eyes {
+  position: relative;
+  top: -10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.eyes .eye {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  display: block;
+  background: #fff;
+  margin: 0 5px;
+  border-radius: 50%;
+}
+
+.eyes .eye::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: #333;
+  border-radius: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.eye:hover::before {
+  border-radius: 30%;
+  width: 13px;
+  height: 13px;
+  background: darkred;
+}
+
 #points {
   position: absolute;
-  top: 70px;
+  top: 45vh;
+  left: 10px;
   font-family: 'Sacramento', cursive;
   font-family: 'Merienda One', cursive;
   font-size: 6vh;
-  color: #001380;
+  color: #31fc03;
 }
 
 .clock {
@@ -172,7 +261,7 @@ input {
 }
 
 .num3 div {
-  font-size: 5vh;
+  font-size: 4vh;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
@@ -203,7 +292,7 @@ input {
 }
 
 .num6 div {
-  font-size: 5vh;
+  font-size: 4vh;
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
 }
@@ -234,7 +323,7 @@ input {
 }
 
 .num9 div {
-  font-size: 5vh;
+  font-size: 4vh;
   -webkit-transform: rotate(-270deg);
           transform: rotate(-270deg);
 }
@@ -265,7 +354,7 @@ input {
 }
 
 .num12 div {
-  font-size: 5vh;
+  font-size: 4vh;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
@@ -309,7 +398,6 @@ input {
 .clock__indicator {
   position: absolute;
   left: calc(50% - 1px);
-  top: 5px;
   width: 3px;
   -webkit-transform-origin: bottom center;
           transform-origin: bottom center;
@@ -318,7 +406,7 @@ input {
 }
 
 .clock__indicator {
-  height: 48.5%;
+  height: 50%;
   border-top: 5px solid white;
   background: none;
 }
