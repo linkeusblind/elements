@@ -42,7 +42,7 @@ body {
 
 .answer {
   position: absolute;
-  bottom: 17vh;
+  bottom: 15vh;
 }
 
 input {
@@ -87,8 +87,8 @@ input {
   position: relative;
   width: 50vh;
   height: 50vh;
-  max-height: 70vw;
-  max-width: 70vw;
+  max-height: 60vw;
+  max-width: 60vw;
   overflow: hidden;
   border-radius: 50%;
   border: solid white;
