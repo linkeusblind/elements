@@ -24,6 +24,14 @@ body {
   background-repeat: no-repeat;
 }
 
+h1 {
+  position: absolute;
+  top: 10px;
+  color: white;
+  font-family: 'Sacramento', cursive;
+  font-family: 'Merienda One', cursive;
+}
+
 .random-time {
   position: absolute;
   bottom: 25px;

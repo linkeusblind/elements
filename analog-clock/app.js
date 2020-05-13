@@ -47,7 +47,7 @@ function randomClock() {
 
     secDiv.style.transform = "rotate(" + (sec * 6) + "deg)"
     minDiv.style.transform = "rotate(" + (min * 6) + "deg)"
-    hourDiv.style.transform = "rotate(" + (hour * 30) + "deg)"
+    hourDiv.style.transform = "rotate(" + (hour * 30 + (min/5)) + "deg)"
 }
 
 document.addEventListener("DOMContentLoaded", () => {
