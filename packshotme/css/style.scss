@@ -65,7 +65,7 @@ a:hover {
     line-height: 50px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0 50px;
+    padding: 0 10px;
 }
 
 .header.fixed {
@@ -77,10 +77,10 @@ a:hover {
 .header a {
     display: block;
     width: 35px;
-
     position: absolute;
     top: 20px;
     right: 20px;
+    z-index: 2;
 }
 
 .header a:before,
@@ -100,6 +100,7 @@ a:hover {
 /* SWIPER SLIDER */
 .swiper-container {
     height: 90vh;
+
 }
 
 .header-img {
@@ -112,6 +113,8 @@ a:hover {
 figcaption { 
     display: none;
 }
+
+
 
 /* LOGO STYLE AND ANIMATION */
 
@@ -366,7 +369,7 @@ figcaption {
     
     
     #logo-fill:hover {
-        width: 65%;
+        width: 35%;
     }
     
   }

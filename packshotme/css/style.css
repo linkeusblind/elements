@@ -66,7 +66,7 @@ a:hover {
   line-height: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0 50px;
+  padding: 0 10px;
 }
 
 .header.fixed {
@@ -81,6 +81,7 @@ a:hover {
   position: absolute;
   top: 20px;
   right: 20px;
+  z-index: 2;
 }
 
 .header a:before,
@@ -409,7 +410,7 @@ figcaption {
     z-index: 1;
   }
   #logo-fill:hover {
-    width: 65%;
+    width: 35%;
   }
 }
 /*# sourceMappingURL=style.css.map */
