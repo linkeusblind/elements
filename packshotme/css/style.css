@@ -102,6 +102,11 @@ a:hover {
 /* SWIPER SLIDER */
 .swiper-container {
   height: 90vh;
+  padding-top: 60px;
+}
+
+:root {
+  --swiper-theme-color: #E1007A;
 }
 
 .header-img {
