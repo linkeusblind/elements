@@ -63,11 +63,8 @@ a:hover {
     font-weight: bold;
     color: rgb(0, 0, 0);
     line-height: 50px;
-
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    width: 100%;
-    height: 50px;
     padding: 0 50px;
 }
 
@@ -100,56 +97,31 @@ a:hover {
     height: 3px;
     margin: 6px 0;
 }
-
-#foot {
-    background: #000000;
+/* SWIPER SLIDER */
+.swiper-container {
+    height: 90vh;
 }
 
-#foot .container {
-    margin: 25px 20px 0 20px;
-    padding: 27px 0 25px;
-    overflow: hidden;
+.header-img {
+    height: 80vh;
+    padding-bottom: 80px;
 }
 
-#copy {
-    float: left;
+
+#img-copyright,
+figcaption { 
+    display: none;
 }
 
-#backToTop {
-    text-align: center;
-}
-
-.foot {
-    float: right;
-}
-#up-arrow {
-    height: 50px;
-    transform: translateY(-23px);
-
-}
-#arrow {
-
-    animation: swing 1s ease-in-out alternate-reverse infinite;
-}
-
-@keyframes swing {
-    from {
-        transform: translateY(20px);
-
-    }
-
-    to {
-        transform: translateY(-20px);
-
-    }
-}
 /* LOGO STYLE AND ANIMATION */
+
 #logo {
     position: absolute;
     width: 60%;
     top: 20px;
     left: 50%;
     transform: translate(-60%, 0);
+    z-index: 1;
 }
 
 #logo-fill {
@@ -161,7 +133,10 @@ a:hover {
     transform: translate(-60%, 0);
     animation: show 2s ease forwards 5s;
     transition: 0.3s;
+    z-index: 1;
 }
+
+
 
 #logo-fill:hover {
     width: 65%;
@@ -319,3 +294,79 @@ a:hover {
 
     }
 }
+
+
+
+/* FOOTER */
+#foot {
+    background: #000000;
+}
+
+#foot .container {
+    margin: 25px 20px 0 20px;
+    padding: 27px 0 25px;
+    overflow: hidden;
+}
+
+#copy {
+    float: left;
+}
+
+#backToTop {
+    text-align: center;
+}
+
+.foot {
+    float: right;
+}
+#up-arrow {
+    height: 50px;
+    transform: translateY(-23px);
+
+}
+#arrow {
+
+    animation: swing 1s ease-in-out alternate-reverse infinite;
+}
+
+@keyframes swing {
+    from {
+        transform: translateY(20px);
+
+    }
+
+    to {
+        transform: translateY(-20px);
+
+    }
+}
+/* RESPONSIVE WEB DESIGN - media queries */
+@media screen and (min-width:500px){ /* RWD Step 1 Logo adjustment*/
+    #logo {
+        position: absolute;
+        width: 30%;
+        top: 20px;
+        left: 15%;
+        transform: translate(-30%, 0);
+        z-index: 1;
+    }
+    
+    #logo-fill {
+        position: absolute;
+        opacity: 0;
+        width: 30%;
+        top: 20px;
+        left: 15%;
+        transform: translate(-30%, 0);
+        animation: show 2s ease forwards 5s;
+        transition: 0.3s;
+        z-index: 1;
+    }
+    
+    
+    
+    #logo-fill:hover {
+        width: 65%;
+    }
+    
+  }

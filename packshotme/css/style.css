@@ -66,8 +66,6 @@ a:hover {
   line-height: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 100%;
-  height: 50px;
   padding: 0 50px;
 }
 
@@ -100,58 +98,19 @@ a:hover {
   margin: 6px 0;
 }
 
-#foot {
-  background: #000000;
+/* SWIPER SLIDER */
+.swiper-container {
+  height: 90vh;
 }
 
-#foot .container {
-  margin: 25px 20px 0 20px;
-  padding: 27px 0 25px;
-  overflow: hidden;
+.header-img {
+  height: 80vh;
+  padding-bottom: 80px;
 }
 
-#copy {
-  float: left;
-}
-
-#backToTop {
-  text-align: center;
-}
-
-.foot {
-  float: right;
-}
-
-#up-arrow {
-  height: 50px;
-  -webkit-transform: translateY(-23px);
-          transform: translateY(-23px);
-}
-
-#arrow {
-  animation: swing 1s ease-in-out alternate-reverse infinite;
-}
-
-@-webkit-keyframes swing {
-  from {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-  }
-  to {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
-}
-
-@keyframes swing {
-  from {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-  }
-  to {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
+#img-copyright,
+figcaption {
+  display: none;
 }
 
 /* LOGO STYLE AND ANIMATION */
@@ -162,6 +121,7 @@ a:hover {
   left: 50%;
   -webkit-transform: translate(-60%, 0);
           transform: translate(-60%, 0);
+  z-index: 1;
 }
 
 #logo-fill {
@@ -176,6 +136,7 @@ a:hover {
           animation: show 2s ease forwards 5s;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  z-index: 1;
 }
 
 #logo-fill:hover {
@@ -363,6 +324,92 @@ a:hover {
   }
   to {
     opacity: 100;
+  }
+}
+
+/* FOOTER */
+#foot {
+  background: #000000;
+}
+
+#foot .container {
+  margin: 25px 20px 0 20px;
+  padding: 27px 0 25px;
+  overflow: hidden;
+}
+
+#copy {
+  float: left;
+}
+
+#backToTop {
+  text-align: center;
+}
+
+.foot {
+  float: right;
+}
+
+#up-arrow {
+  height: 50px;
+  -webkit-transform: translateY(-23px);
+          transform: translateY(-23px);
+}
+
+#arrow {
+  animation: swing 1s ease-in-out alternate-reverse infinite;
+}
+
+@-webkit-keyframes swing {
+  from {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+}
+
+@keyframes swing {
+  from {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+}
+
+/* RESPONSIVE WEB DESIGN - media queries */
+@media screen and (min-width: 500px) {
+  /* RWD Step 1 Logo adjustment*/
+  #logo {
+    position: absolute;
+    width: 30%;
+    top: 20px;
+    left: 15%;
+    -webkit-transform: translate(-30%, 0);
+            transform: translate(-30%, 0);
+    z-index: 1;
+  }
+  #logo-fill {
+    position: absolute;
+    opacity: 0;
+    width: 30%;
+    top: 20px;
+    left: 15%;
+    -webkit-transform: translate(-30%, 0);
+            transform: translate(-30%, 0);
+    -webkit-animation: show 2s ease forwards 5s;
+            animation: show 2s ease forwards 5s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    z-index: 1;
+  }
+  #logo-fill:hover {
+    width: 65%;
   }
 }
 /*# sourceMappingURL=style.css.map */
