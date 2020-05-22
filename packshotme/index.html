@@ -59,35 +59,67 @@
     <header class="header">
         <a href="#menu"><span></span></a>
         <!-- Slider main container -->
-    <div class="swiper-container">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper" itemscope itemtype="http://schema.org/ImageGallery">
-            <!-- Slides -->
-            <div class="swiper-slide">
-                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                    <img class="header-img" src="images/header-img/Converse-CT-AS-Bosey-Boot.jpg" itemprop="contentUrl"
-                        alt="Converse Bosey-Boot by Packshotme" />
-                    <figcaption itemprop="caption description">
-                        PackshotMe - Fotografia produktowa, packshoty, studio fotograficzne. Packshoty - obuwie.
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper" itemscope itemtype="http://schema.org/ImageGallery">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <img class="header-img" src="images/header-img/Converse-CT-AS-Bosey-Boot.jpg"
+                                itemprop="contentUrl" alt="Converse Bosey-Boot by Packshotme" />
+                            <figcaption itemprop="caption description">
+                                PackshotMe - Fotografia produktowa, packshoty, studio fotograficzne. Packshoty - obuwie.
 
-                        <!-- define copyright -->
-                        <span class="img-copyright" itemprop="copyrightHolder">Packshotme</span>
-                    </figcaption>
-                </figure>
+                                <!-- define copyright -->
+                                <span class="img-copyright" itemprop="copyrightHolder">Packshotme</span>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <img class="header-img" src="images/header-img/Portfel-PTNS.jpg" itemprop="contentUrl"
+                                alt="Portfel Szmal dla Pan tu nie stał - fotografia produktowa" />
+                            <figcaption itemprop="caption description">
+                                PackshotMe - Fotografia produktowa, packshoty, studio fotograficzne. Packshoty -
+                                galanteria.
+
+                                <!-- define copyright -->
+                                <span class="img-copyright" itemprop="copyrightHolder">Packshotme</span>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <img class="header-img" src="images/header-img/Kieliszek-Packshotme.jpg"
+                                itemprop="contentUrl" alt="Fotografia produktowa - szkło" />
+                            <figcaption itemprop="caption description">
+                                PackshotMe - Fotografia produktowa, packshoty, studio fotograficzne. Packshoty -
+                                galanteria.
+
+                                <!-- define copyright -->
+                                <span class="img-copyright" itemprop="copyrightHolder">Packshotme</span>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
             </div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
-    </div>
         <!-- Logo -->
 
         <div>
@@ -500,7 +532,7 @@
             </ul>
         </nav>
     </header>
-    
+
 
     <DIV>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus a voluptate veritatis aspernatur ullam at
         sequi, quae ab officiis excepturi! Rem nobis qui ipsa cumque eveniet iusto cupiditate tenetur nostrum, sunt
@@ -662,6 +694,7 @@
             slidesPerView: 'auto',
             loop: true,
             grabCursor: true,
+            zoom: true,
 
             // If we need pagination
             pagination: {
