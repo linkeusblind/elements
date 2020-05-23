@@ -39,7 +39,7 @@
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#000000">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/nav.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -117,8 +117,7 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
 
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
+
         </div>
         <!-- Logo -->
 
@@ -532,7 +531,7 @@
             </ul>
         </nav>
     </header>
-
+    <main></main>
 
     <DIV>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus a voluptate veritatis aspernatur ullam at
         sequi, quae ab officiis excepturi! Rem nobis qui ipsa cumque eveniet iusto cupiditate tenetur nostrum, sunt
@@ -691,7 +690,7 @@
         var mySwiper = new Swiper('.swiper-container', {
             // Optional parameters
             direction: 'horizontal',
-            slidesPerView: 'auto',
+            slidesPerView: '1',
             loop: true,
             grabCursor: true,
             zoom: true,
@@ -699,18 +698,45 @@
             // If we need pagination
             pagination: {
                 el: '.swiper-pagination',
+                dynamicBullets: true,
             },
 
+            breakpoints: {
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                    zoom: false,
+                },
+                1280: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                    zoom: false,
+                },
+            },
             // Navigation arrows
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+        })
+    </script>
+    <script>
+        const $doc = $(document);
+        const $header = $('header');
+        const $main = $('main');
 
-            // And if we need scrollbar
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
+        $doc.on("scroll", function () {
+            
+            const scrollPos = $doc.scrollTop();
+            const sectionOffset = $main.offset().top;
+            const headerHeight = $header.outerHeight();
+
+            if (scrollPos < sectionOffset) {  
+                $header.css({
+                'opacity': 1 - scrollPos / headerHeight,
+                'filter': 'grayscale(' + 2 * scrollPos / headerHeight + ')',
+                })
+            }
         })
     </script>
 </body>
