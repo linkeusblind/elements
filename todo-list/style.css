@@ -19,7 +19,7 @@ header {
 }
 
 header, form {
-  min-height: 20vh;
+  min-height: 15vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,8 +64,9 @@ form button:hover {
 }
 
 .todo-list {
-  min-width: 30%;
+  width: 90vw;
   list-style: none;
+  overflow: hidden;
 }
 
 .todo {
@@ -143,9 +144,9 @@ select {
 
 select {
   color: #ff95e6;
-  width: 15rem;
+  width: 20rem;
   cursor: pointer;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .select::after {
@@ -167,7 +168,7 @@ select {
 }
 
 .filter-todo {
-  font-size: 1rem;
+  font-size: 1.8rem;
 }
 
 /* FOOTER */

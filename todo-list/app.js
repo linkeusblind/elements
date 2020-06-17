@@ -1,6 +1,7 @@
 const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
+const todoContainer = document.querySelector('.todo-container');
 const filterOption = document.querySelector('.filter-todo');
 
 
@@ -67,7 +68,7 @@ function deleteCheck(e) {
         })
     }
 
-    if (item.classList[0] === 'complete-btn') {
+    if (item.classList[0] === 'complete-btn' || item.classList[0] === 'todo-item') {
 
         if (completed === true) {
             localStorage.setItem(todoText, JSON.stringify(todoText));
@@ -76,6 +77,10 @@ function deleteCheck(e) {
             localStorage.removeItem(todoText, todoText);
         }
     }
+
+    todoList.classList.remove('completed');
+    todoContainer.classList.remove('completed');
+
 
 }
 
@@ -178,16 +183,18 @@ function removeLocalTodos(todo) {
 }
 
 /* PLUGINS */
-function backToTop(){
+function backToTop() {
     $('#backToTop').hide();
-    $(window).scroll( function(){
-      if( $(this).scrollTop() > 100 )
-        $('#backToTop').fadeIn();
-      else
-        $('#backToTop').fadeOut();
-    } );
-    $('#backToTop a').click( function(){
-      $('body,html').animate( {scrollTop:0}, 600 );
-      return false;
-    } );
-  }
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100)
+            $('#backToTop').fadeIn();
+        else
+            $('#backToTop').fadeOut();
+    });
+    $('#backToTop a').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
+}
