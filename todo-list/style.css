@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +8,6 @@
 body {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#fcb5eb), color-stop(1%, #ffc4f1), to(#e9bafa));
   background-image: linear-gradient(to top, #fcb5eb 0%, #ffc4f1 1%, #e9bafa 100%);
-  font-family: 'Fredoka One', cursive;
   color: black;
   min-height: 100vh;
 }
