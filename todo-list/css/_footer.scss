@@ -1,0 +1,28 @@
+#foot .container {
+
+    margin: 25px 20px 0 20px;
+    padding: 27px 0 25px;
+    overflow: hidden;
+
+}
+
+#copy {
+    float: left;
+}
+
+#backToTop {
+    text-align: center;
+}
+
+.foot {
+    float: right;
+}
+#up-arrow {
+    height: 70px;
+    transform: translateY(-23px);
+
+}
+#arrow {
+
+    animation: swing 1s ease-in-out alternate-reverse infinite;
+}
