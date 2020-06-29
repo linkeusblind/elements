@@ -6,8 +6,8 @@
 }
 
 body {
-    background-image: linear-gradient(to top, #fcb5eb 0%, #ffc4f1 1%, #e9bafa 100%);
-    color: black;
+    background: $backgroundColor;
+    color: white;
     min-height:100vh;
 
 }
@@ -18,8 +18,7 @@ header,form {
     min-height: 15vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;    
 }
 form input,form button {
     padding: 0.5rem;
@@ -29,7 +28,7 @@ form input,form button {
     
 }
 form button {
-    color: #fcb5eb;
+    color: $mainColor;
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -37,7 +36,7 @@ form button {
 }
 form button:hover {
     color: white;
-    background: #fcb5eb;
+    background: $mainColor;
 }
 .todo-input {
     width: 60vw;
@@ -58,20 +57,26 @@ form button:hover {
 .todo {
     margin: 0.5rem;
     background: white;
-    color: black;
+    color: $mainColor;
     font-size: 1.8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: all 0.5s ease;
-
+}
+.todo::before {
+    content: "";
+    //position: absolute;
+    background: $mainColor;
+    height: 3.15rem;
+    width: 10px;
 }
 .todo li {
     flex: 1;
 
 }
 .trash-btn, .complete-btn {
-    background: #dd3434;
+    background: #df4747;
     color: white;
     border: none;
     padding: 1rem;
@@ -79,11 +84,11 @@ form button:hover {
     font-size: 1rem;
 }
 .complete-btn {
-    background: rgb(79, 243, 79);
+    background: rgb(91, 214, 91);
 
 }
 .todo-item {
-    padding: 0rem 0.5rem;
+    padding: 0rem 1rem;
 
 }
 .fa-trash, .fa-check {
@@ -112,7 +117,7 @@ select {
     overflow: hidden;
 }
 select {
-color: #ff95e6;
+color: $mainColor;
 width: 20rem;
 cursor: pointer;
 padding: 0.5rem;
@@ -120,7 +125,7 @@ padding: 0.5rem;
 .select::after {
     content: "\25BC";
     position: absolute;
-    background: #fcb5eb;
+    background: $mainColor;
     color: white;
     top: 0;
     right: 0;
@@ -130,7 +135,7 @@ padding: 0.5rem;
 }
 .select:hover::after {
     background: white;
-    color: #fcb5eb;
+    color: $mainColor;
 }
 .filter-todo {
     font-size: 1.8rem;
