@@ -1,5 +1,5 @@
 const memoryGame = {
-    tileCount : 20, //liczba klocków
+    tileCount : 30, //liczba klocków
     tileOnRow : 5, //liczba klocków na rząd
     divBoard : null, //div z planszą gry
     divScore : null, //div z wynikiem gry
@@ -16,7 +16,12 @@ const memoryGame = {
         "img/07.jpg",
         "img/08.jpg",
         "img/09.jpg",
-        "img/10.jpg"
+        "img/10.jpg",
+        "img/11.jpg",
+        "img/12.jpg",
+        "img/13.jpg",
+        "img/14.jpg",
+        "img/15.jpg"
     ],
     canGet : true, //czy można klikać na kafelki
     tilePairs : 0, //liczba dopasowanych kafelkow
