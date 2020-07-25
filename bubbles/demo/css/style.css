@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  
+
+}
+header{ 
+  width:100vw;
+  height:80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+canvas{
+
+  vertical-align:bottom;
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+  width: 100vw;
+  height: 100vh;
+  background-color: #1bb1e6;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
