@@ -68,6 +68,14 @@ form button:hover {
     background: $mainColor;
 }
 
+a {
+    text-decoration: none;
+    color: $mainColor;
+}
+a:hover{
+    color: white;
+}
+
 .todo-input {
     width: 83vw;
 }
