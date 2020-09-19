@@ -3,7 +3,7 @@ const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
 const todoContainer = document.querySelector('.todo-container');
 const filterOption = document.querySelector('.filter-todo');
-const speakBtn = document.querySelector('.speakBtn');
+
 
 
 
@@ -206,6 +206,15 @@ function backToTop() {
 }
 
 //speak feauture
+const speakBtn = document.querySelector('.speakBtn');
+
+
+const content = document.querySelector('.todo-input');
+
+
+
+
+
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
 
@@ -216,37 +225,16 @@ recognition.onstart = function() {
 };
 
 recognition.onresult = function(event) {
-    console.log(event);
     const current = event.resultIndex;
     const transcript = event.results[current][0].transcript;
     content.textContent = transcript;
-    readOutLoud(transcript);
+    todoInput.value = transcript;
+
 };
 
 speakBtn.addEventListener('click', () => {
     recognition.start();
 });
 
-function readOutLoud(message){
-    let speech = new SpeechSynthesisUtterance();
 
 
-    
-    speech.text = message;
-
-    
-    speech.lang = 'pl-PL';
-    speech.name = 'Google polski';
-    speech.volume = 1;
-    speech.rate = 1;
-    speech.pitch = 1;
-    
-    console.log(speech.name);
-    
- 
-    window.speechSynthesis.speak(speech);
-
-
-
-
-}
