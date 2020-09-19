@@ -68,16 +68,25 @@ form button:hover {
     background: $mainColor;
 }
 
-a {
-    text-decoration: none;
+.speakBtn {
+    padding: 0.5rem;
+    font-size: 1.8rem;
+    border: none;
+    background: white;
     color: $mainColor;
+    background: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
 }
 a:hover{
     color: white;
+    background: $mainColor;
 }
 
 .todo-input {
-    width: 83vw;
+    width: 80vw;
 }
 
 .todo-container {
