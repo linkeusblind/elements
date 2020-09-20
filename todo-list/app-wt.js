@@ -203,3 +203,33 @@ function backToTop() {
         return false;
     });
 }
+//speak feauture
+const speakBtn = document.querySelector('.speakBtn');
+
+
+const content = document.querySelector('.todo-input');
+
+
+
+
+
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const recognition = new SpeechRecognition();
+
+recognition.lang = 'pl-PL';
+
+recognition.onstart = function() {
+    console.log('voice is activated, you can speak to microphone');
+};
+
+recognition.onresult = function(event) {
+    const current = event.resultIndex;
+    const transcript = event.results[current][0].transcript;
+    content.textContent = transcript;
+    todoInput.value = transcript;
+
+};
+
+speakBtn.addEventListener('click', () => {
+    recognition.start();
+});

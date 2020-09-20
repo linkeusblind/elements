@@ -235,6 +235,3 @@ recognition.onresult = function(event) {
 speakBtn.addEventListener('click', () => {
     recognition.start();
 });
-
-
-
