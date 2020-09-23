@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,8 @@
     <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+        integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
     <link rel="stylesheet" href="dist/mmenu-light.css">
@@ -24,6 +26,7 @@
         });
     </script>
 </head>
+
 <body>
     <header class="header">
         <h1>Piątek</h1>
@@ -103,6 +106,7 @@
     </div>
     <script src="./app-zj-pt.js"></script>
     <script src="dist/mmenu-light.js"></script>
+    <script src="sw-main.js"></script>
     <script>
         var menu = new MmenuLight(
             document.querySelector('#menu'),
@@ -125,14 +129,15 @@
             .addEventListener('click', evnt => {
                 evnt.preventDefault();
                 drawer.open();
-                
+
             });
-            document.querySelector('#menu')
+        document.querySelector('#menu')
             .addEventListener('click', evnt => {
                 evnt.preventDefault();
                 drawer.close();
-                
+
             });
     </script>
 </body>
+
 </html>
