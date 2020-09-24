@@ -93,6 +93,8 @@ a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    counter-reset: slides;
+    overflow: auto;
 
 }
 
@@ -104,6 +106,7 @@ a:hover{
 }
 
 .todo {
+    width: 80vw;
     margin: 0.5rem;
     background: white;
     color: $mainColor;
@@ -111,8 +114,14 @@ a:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: all 0.5s ease;
+    //transition: all 0.5s ease;
+    z-index: 5;
+
+    position: relative;
+    user-select: none;
+    z-index: 5;
 }
+
 
 .todo::before {
     content: "";
@@ -222,4 +231,40 @@ select {
     }
 }
 
+/* Draggable Feature */
+.todo.is-dragging {
+    z-index: 10;
+  }
+  
+  .ui-sortable-helper {
+    transition: none !important;
+    animation: pulse 0.4s alternate infinite;
+  }
+  
+  .sortable-placeholder {
+    height: 60px;
+    width: 5px;
+    border-left: 2px solid #4999DA; 
+    margin: 0 0 0.75rem 0;
+    position: relative;
+    z-index: 6;
+  }
+  
+  @keyframes pulse {
+    100% { transform: scale(1.1); } 
+  }
+  
+  .cloned-slides {
+    .todo {
+      position: absolute;
+      z-index: 1;
+      &:before {
+        content: attr(data-pos);
+      }
+    }
+  }
+  
+  
+  
+ 
 @import 'footer';
