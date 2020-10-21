@@ -1,9 +1,9 @@
 
 document.addEventListener("DOMContentLoaded", function (event) {
 
-    var slidesElem = document.querySelector('.todo-list');
-    var slideSize = getSize(document.querySelector('.todo'));
-    var pckry = new Packery(slidesElem, {
+    const slidesElem = document.querySelector('.todo-list');
+    const slideSize = getSize(document.querySelector('.todo'));
+    const pckry = new Packery(slidesElem, {
         rowHeight: slideSize.outerHeight
     });
     // get item elements
@@ -20,17 +20,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
         // bind Draggabilly events to Packery
         pckry.bindDraggabillyEvents(draggie);
     }
-
     // re-sort DOM after item is positioned
     pckry.on('dragItemPositioned', function (_pckry, draggedItem) {
-        var index = pckry.items.indexOf(draggedItem);
+        var index = pckry.items.indexOf(pckry.items);
         var nextItem = pckry.items[index + 1];
 
-        if (nextItem) {
-            slidesElem.insertBefore(draggedItem.element, nextItem.element);
-        } else {
-            slidesElem.appendChild(draggedItem.element);
-        }
+
+        console.log(nextItem);
+
+        // if (nextItem) {
+        //     slidesElem.insertBefore(_pckry.element, nextItem.element);
+        // } else {
+        //     slidesElem.appendChild(_pckry.element);
+        // }
 
     });
 

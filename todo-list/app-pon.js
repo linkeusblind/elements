@@ -12,7 +12,7 @@ todoList.addEventListener('click', deleteCheck);
 filterOption.addEventListener('change', filterTodo);
 
 function addTodo(event) {
-    //event.preventDefault();
+    event.preventDefault();
     if (todoInput.value === '') {
 
     } else {
@@ -183,6 +183,7 @@ function removeLocalTodos(todo) {
         todos = JSON.parse(localStorage.getItem('todosPon'));
     }
     const todoIndex = todo.children[0].innerText;
+
     todos.splice(todos.indexOf(todoIndex), 1);
     localStorage.setItem('todosPon', JSON.stringify(todos));
 }
