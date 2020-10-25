@@ -111,6 +111,7 @@ button.active {
     display: flex;
     justify-content: center;
     margin-top: 30px;
+    transition: all 0.75s ease-out;
 }
 
 .purchase button {

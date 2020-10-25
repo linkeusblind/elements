@@ -8,7 +8,9 @@ const description = document.querySelector('.info h3');
 const sizes = document.querySelector('.sizes');
 
 container.addEventListener('mousemove', (e) => {
-    let xAxis = ((window.innerWidth /2 - e.pageX) / -25);
+    console.log(e.pageX, e.pageY);
+    console.log(xAxis, yAxis);
+    let xAxis = ((window.innerWidth /2 - e.pageX) / 25);
     let yAxis = ((window.innerWidth /2 - e.pageY) / 25);
     card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`
 });

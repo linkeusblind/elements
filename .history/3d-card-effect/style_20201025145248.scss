@@ -90,7 +90,7 @@ body {
     width: 10vw;
     max-width: 90px;
     height: 6vh;
-    max-height: 40px;
+    max-height: 20px;
     background: none;
     border: none;
     box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
@@ -107,10 +107,10 @@ button.active {
 
 .purchase {
     width: 50vw;
-    max-width: 380px;
     display: flex;
     justify-content: center;
     margin-top: 30px;
+    transition: all 0.75s ease-out;
 }
 
 .purchase button {
@@ -122,7 +122,6 @@ button.active {
     border-radius: 30px;
     color: white;
     font-weight: bolder;
-    transition: all 0.75s ease-out;
 }
 @media only screen and (min-width: 600px) {
     .info h1 {
