@@ -10,7 +10,6 @@ body {
     justify-content: space-evenly;
     align-items: center;
     font-family: "Montserrat", sans-serif;
-    overflow: hidden;
   }
 
   .time-select,
@@ -81,8 +80,8 @@ body {
   .time-display {
     color: white;
     position: absolute;
-    font-size: 3em;
-
+    font-size: 16vw;
+    bottom: 1vw;
   }
   .play{
     width: 20%;

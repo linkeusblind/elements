@@ -10,7 +10,6 @@ body {
     justify-content: space-evenly;
     align-items: center;
     font-family: "Montserrat", sans-serif;
-    overflow: hidden;
   }
 
   .time-select,
@@ -93,13 +92,7 @@ body {
     margin:  0 0 20vw 0;
   }
 
-  video {
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    height: 100vh;
-    z-index: -10;
-  }
+
   @media screen and (min-width:1024px){
     video{
         width: 100%;
