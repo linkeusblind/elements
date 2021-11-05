@@ -70,7 +70,7 @@ function timeCheck() {
 
     } else {
         face.style.background = "red";
-        
+
         style.innerHTML = ".face::before{top: 40px;width: 30px;height: 5px;background: darkred;border-top-left-radius: 50px;border-top-right-radius: 50px;transform: rotate(-10deg);}}";
     }
 };
